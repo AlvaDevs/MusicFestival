@@ -1,0 +1,23 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mix;
+
+.about-festival {
+    @include mix.container;
+
+    @include mix.desktop  {
+        @include mix.grid(2);
+    }
+      
+}
+
+.content-festival {
+    margin-top: 5rem;
+
+    h2 {
+        margin-bottom: 2rem;
+    }
+    .date {
+        color: var.$green;
+        font-weight: 700;
+    }
+}

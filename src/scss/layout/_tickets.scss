@@ -1,0 +1,82 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mix;
+
+.container-tickets {
+    background-color: var.$green;
+
+    h3 {
+        color: var.$white;
+    }
+
+    .tickets {
+        @include mix.container;
+        @include mix.tablet {
+            @include mix.grid(2);
+        }
+    }
+}
+
+.pass {
+    transition: transform .3s ease-in-out;
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &-name {
+        font-size: 3.6rem;
+        font-weight: 900;
+        text-align: center;
+        color: var.$white;
+    }
+    &-header,
+    &-footer {
+        padding: .5rem;
+
+        p {
+            text-align: center;
+            color: var.$white;
+            margin: 0;
+        }
+    }
+    &-header {
+        background-color: var.$pink;
+
+        p {
+            text-transform: uppercase;
+            font-size: 2.2rem;
+            padding: 1rem 0;
+        }
+    }
+
+    &-body {
+        background-color: var.$white;
+         
+        ul {
+            @include mix.reset-list;
+
+            li {
+                padding: 2rem;
+                border-bottom: 1px solid #e1e1e1;
+            }
+        }
+    }
+
+    &-footer {
+        background-color: var.$white;
+        padding: 3rem;
+
+        p {
+            font-size: 2.8rem;
+            font-weight: 900;
+            background-color: var.$purple;
+            padding: 1rem 0;
+            border-radius: 1rem;
+            cursor: pointer;
+
+            transition: background-color .3s ease-in-out;
+            &:hover {
+                background-color: darken(var.$purple, 20%);
+            }
+        }
+    }
+}

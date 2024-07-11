@@ -1,0 +1,44 @@
+@use 'variables' as var;
+
+// Media Queries
+@mixin phone {
+    @media (min-width: var.$phone) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: var.$tablet) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: var.$desktop) {
+        @content;
+    }
+}
+@mixin desktopXL {
+    @media (min-width: var.$desktopXL) {
+        @content;
+    }
+}
+
+// Container
+@mixin container {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+// Grid
+@mixin grid($columns : 1, $gap : 5rem) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $gap;
+}
+
+// list
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
