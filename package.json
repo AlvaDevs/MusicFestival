@@ -1,6 +1,6 @@
 {
   "name": "festival-musical",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "description": "Aprendiendo SASS y NPM",
   "type": "module",
   "main": "index.js",
@@ -24,8 +24,11 @@
   },
   "homepage": "https://github.com/AlvaDevs/Festival-musical#readme",
   "devDependencies": {
+    "glob": "^11.0.0",
     "gulp": "^5.0.0",
     "gulp-sass": "^5.1.0",
-    "sass": "^1.77.7"
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.77.7",
+    "sharp": "^0.33.4"
   }
 }
